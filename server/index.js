@@ -53,6 +53,41 @@ app.post('/signup', async (req , res) => {
     }
 })
 
+app.post('/login', async (req , res) => {
+    const {email , password} = req.body
+
+    if(!email || !password)
+    {
+        return res.json({
+            success : false,
+            message:"Email and Password is required"
+        })
+    }
+
+    const user = await User.findOne({
+        email:email,
+        password:password
+    }).select(" name email mobile")
+
+    if(user)
+    {
+        res.json({
+            success : true,
+            data:user,
+            message:"Login Successfully"
+        })
+    }else
+    {
+        res.json({
+            success : false,
+            
+            message:"Invalid Credentials"
+        })
+    }
+    
+
+})
+
 app.listen(PORT, () => {
     console.log(`Surver is running on PORT ${PORT}`);
     ConnectDB();
