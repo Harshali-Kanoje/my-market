@@ -241,6 +241,7 @@ app.get('/order/:id', async (req, res) => {
     })
 })
 
+// get orders
 app.get('/orders', async (req, res) => {
     
     

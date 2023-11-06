@@ -1,0 +1,37 @@
+.form-container{
+    /* width: 500px; */
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 0 rgb(112, 109, 109);
+}
+
+.form-input{
+    margin: 20px auto;
+}
+
+.form-input input{
+    width: 300px;
+    margin-top: 5px;
+    font-size: 17px;
+    height: 30px;
+     border-radius: 5px;
+    /*border: none; */
+}
+
+.form-input label{
+    font-size: 20px;
+}
+
+.signup-btn{
+    display: block;
+    width: 200px;
+    margin: 15px auto;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+    font-size: 17px;
+}
+
