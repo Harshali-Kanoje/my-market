@@ -23,7 +23,15 @@ const Navbar = () => {
             </div>
 
             <div>
-                <span> Hello , {user.name || "User"}</span>
+                <span> Hello , {user?.name || "User"}</span>
+                {
+                    user?.name ? <span onClick={() => {
+                        localStorage.removeItem('user')
+                        window.location.href = '/login'
+                    }}
+                    > Logout</span>:null
+                }
+                
             </div>
         </div>
 

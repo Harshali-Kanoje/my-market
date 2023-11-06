@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React ,{useState} from 'react'
+import React ,{useState , useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../component/Navbar/Navbar'
 
@@ -22,6 +22,17 @@ const Login = () => {
       window.location.href = '/';
     }
   }
+
+  // const [user , setUser] = useState({})
+
+    useEffect(() => {
+        const storeuser = JSON.parse(localStorage.getItem("user" || '{}'))
+        if(storeuser?.email)
+        {
+          alert("You have already logged in!")
+          window.location.href = '/';
+        }
+    },[])
 
   return (
     <div>

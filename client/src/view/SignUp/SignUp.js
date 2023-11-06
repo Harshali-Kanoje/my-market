@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import '../../../src/index.css'
@@ -67,6 +67,15 @@ const SignUp = () => {
     window.location.href = '/login'
    }
   }
+
+  useEffect(() => {
+    const storeuser = JSON.parse(localStorage.getItem("user" || '{}'))
+    if(storeuser?.email)
+    {
+      alert("You have already signup !")
+      window.location.href = '/';
+    }
+},[])
 
   return (
     <div>
