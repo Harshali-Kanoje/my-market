@@ -3,6 +3,7 @@ import {createBrowserRouter , RouterProvider} from 'react-router-dom';
 import Home from './view/Home/Home'
 import Login from './view/Login/Login'
 import SignUp from './view/SignUp/SignUp'
+import Order from './view/Order/Order';
 
 const root = ReactDom.createRoot(document.getElementById("root"))
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     {
         path : '/signup',
         element :<SignUp/>
+    },
+    {
+        path : '/orders',
+        element :<Order/>
     }
 ])
 root.render(

@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import '../../../src/index.css'
 import './SignUp.css'
+import Navbar from '../../component/Navbar/Navbar'
 
 const SignUp = () => {
 
@@ -68,6 +69,9 @@ const SignUp = () => {
   }
 
   return (
+    <div>
+      <Navbar/>
+    
     <div className='j-content-center'>
       <form className='form-container'>
         <h1 className='text-center'>SignUp</h1>
@@ -155,6 +159,7 @@ const SignUp = () => {
       </p>
       </form >
     </div >
+    </div>
   )
 }
 
