@@ -4,6 +4,7 @@ import Home from './view/Home/Home'
 import Login from './view/Login/Login'
 import SignUp from './view/SignUp/SignUp'
 import Order from './view/Order/Order';
+import BuyProduct from './view/BuyProduct/BuyProduct';
 
 const root = ReactDom.createRoot(document.getElementById("root"))
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     {
         path : '/orders',
         element :<Order/>
+    },
+    {
+        path : '/buy/:_id',
+        element :<BuyProduct/>
     }
 ])
 root.render(

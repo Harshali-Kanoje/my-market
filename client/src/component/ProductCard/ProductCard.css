@@ -1,0 +1,11 @@
+.product-container{
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px 0;
+    margin: 20px auto;
+}
+
+.product-container img{
+    width: 100%;
+}
