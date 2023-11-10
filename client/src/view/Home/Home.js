@@ -8,6 +8,7 @@ import './Home.css'
 const Home = () => {
 
   const [product , setProduct] = useState([])
+  const [search , setSearch] = useState('')
    
     const loadProduct = async () => {
        const response = await axios.get('/products') 
@@ -16,9 +17,28 @@ const Home = () => {
     useEffect(() => {
       loadProduct();
     },[])
+
+    const searchProduct = async () => {
+     if(search == '')
+     {
+      loadProduct();
+      return
+     }
+     
+      const response = await axios.get(`/product?q=${search}`)
+      setProduct(response?.data?.data)
+     
+    }
+    useEffect(() => {
+      searchProduct();
+    },[search])
   return (
     <div>
       <Navbar/>
+
+      <input type='text' placeholder='Search Product' value={search} onChange={(e) => {
+        setSearch(e.target.value)
+        }} className='search'/>
       <div className='product-card-container'>
       {
         product?.map((product,index) => {

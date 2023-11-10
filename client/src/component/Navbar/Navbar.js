@@ -29,6 +29,7 @@ const Navbar = () => {
                         localStorage.removeItem('user')
                         window.location.href = '/login'
                     }}
+                    className='logout'
                     > Logout</span>:null
                 }
                 

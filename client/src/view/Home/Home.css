@@ -3,3 +3,18 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.p-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search{
+    display: block;
+    margin: 30px auto;
+    border: none;
+    border-bottom: 2px solid rgb(113, 48, 13); ;
+    font-size: 30px;
+    width: 600px;
+    text-align: center;
+}
